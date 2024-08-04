@@ -1,14 +1,15 @@
 using Microsoft.Extensions.Options;
 using eTickets.Data;
+using Microsoft.EntityFrameworkCore;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 //DbContext Configuration
-builder.Services.AddDbContext<AppContext>(options => options ( ) 
-
-
+builder.Services.AddDbContext<AppDbContext>(options => options
+.UseSqlServer(builder.Configuration.GetConnectionString("DefualtConnectionString"))
 );
 
 var app = builder.Build();
