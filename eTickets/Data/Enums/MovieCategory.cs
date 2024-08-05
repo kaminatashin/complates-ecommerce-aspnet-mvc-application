@@ -6,8 +6,8 @@
         Comedy,
         Drama,
         Documentary,
-        Carton
-
+        Cartoon,
+        Horror
     }
 }
 //test
